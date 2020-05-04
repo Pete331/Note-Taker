@@ -59,7 +59,7 @@ router.delete("/api/notes/:id", function (req, res) {
     });
     // writes the new json file with the update notes (without the removed item)
     fs.writeFile(dbPath + "/db.json", JSON.stringify(notes), function (err) {
-      console.log(err);
+        if (err) console.log("error", err);
       res.json(true);
     });
   });
