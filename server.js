@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", router);
 
+// set public folder as static
 app.use(express.static('public'));
 
 
